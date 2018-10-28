@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+{% if name %}
+<h1>恭喜你登录成功 {{ name }}</h1>
+{% endif %}
+<a href={% url "app:login" %}>登录界面</a>
+<br>
+<a href="{% url "app:logout" %}">注销</a>
+<br>
+<a href="{% url "app:register" %}">注册</a>
+</body>
+</html>

@@ -1,0 +1,48 @@
+GET http://localhost:8000/test/1/?test=123
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-26T062906.200.html
+
+###
+
+GET http://localhost:8000/test/1/?test=123
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-26T062812.404.html
+
+###
+
+GET http://localhost:8000/test/1/?test=123
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-26T062710.404.html
+
+###
+
+GET http://localhost:8000/test/1/?test=123
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-26T062701.404.html
+
+###
+
+GET http://localhost:8000/test/1/
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-26T062317.404.html
+
+###
+
+GET http://localhost:8000/test/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-10-26T062249.404.html
+
+###
+
