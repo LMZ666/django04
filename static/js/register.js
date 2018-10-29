@@ -6,7 +6,6 @@ $(function(){
     var account = $("#rePh")
     var m1 = $("#m1")
     var m2 = $("#m2")
-
     function changeCode(){
         $.get("/imagecheck/",function(data){
             console.log($.cookie("code"))

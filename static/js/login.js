@@ -10,7 +10,6 @@ $(function(){
 	var exist = true;
 	var checkCode = $("input[name='checkCode']")
 	var loginBtn = $(".loginBtn")
-	alert($.cookie("name"))
 	//用户名验证
 	if($.cookie("flag")){
 		alert("账号或密码错误")

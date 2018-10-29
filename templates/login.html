@@ -10,6 +10,9 @@
 		<script type="text/javascript" src="{% static "js/login.js" %}"></script>
 	</head>
 	<body>
+    {% if name %}
+        <p>欢迎您{{ name }}</p>
+    {% endif %}
 		<div class="login">
 			
 			<h1 class="lg-logo">
@@ -61,7 +64,7 @@
 						</li>
 						
 						<li class="registerBtn">
-							<a href="register1.html">注册</a>
+							<a href="{% url "app:register" %}">注册</a>
 						</li>
 					</ul>
 				</form>

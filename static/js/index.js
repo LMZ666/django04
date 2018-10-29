@@ -1,10 +1,16 @@
 $(function(){
-	alert($.cookie("account"))
 	var slide = $("#slide");
 	var btn = $("#btn");
 	var btnLi = $("#btn li");
-	
 	//轮播图
+	$.get("/getcookie/", data={"token":$.cookie("token")},function(data){
+		if (data==="999"){
+			alert("用户未登录")
+		}
+		else {
+			alert("欢迎"+data)
+		}
+	})
 	$.getJSON("../../static/json/slideShow.json", function(data){
 		for (var i=0; i<data.length; i++) {
 			var obj = data[i];			
