@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="db" uuid="cf841247-9182-4623-b22e-df45464d8f50">
-      <driver-ref>sqlite.xerial</driver-ref>
+    <data-source source="LOCAL" name="django04@localhost" uuid="2b09b564-13dd-4ce3-96e9-45ccf80ef004">
+      <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:F:\QianFengStudy\2Third\django04\db.sqlite3</jdbc-url>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/django04</jdbc-url>
       <driver-properties>
-        <property name="enable_load_extension" value="true" />
+        <property name="autoReconnect" value="true" />
+        <property name="zeroDateTimeBehavior" value="convertToNull" />
+        <property name="tinyInt1isBit" value="false" />
+        <property name="characterEncoding" value="utf8" />
+        <property name="characterSetResults" value="utf8" />
+        <property name="yearIsDateType" value="false" />
       </driver-properties>
-      <libraries>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.25.1/license.txt</url>
-        </library>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.25.1/sqlite-jdbc-3.25.1.jar</url>
-        </library>
-      </libraries>
     </data-source>
   </component>
 </project>

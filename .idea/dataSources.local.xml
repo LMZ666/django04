@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="db" uuid="cf841247-9182-4623-b22e-df45464d8f50">
-      <database-info product="SQLite" version="3.25.1" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.25.1" family="SQLITE" exact-version="3.25.1">
-        <identifier-quote-string>&quot;</identifier-quote-string>
+    <data-source name="django04@localhost" uuid="2b09b564-13dd-4ce3-96e9-45ccf80ef004">
+      <database-info product="MySQL" version="8.0.12" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )" family="MYSQL" exact-version="8.0.12">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
       </database-info>
-      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
-      <auth-required>false</auth-required>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
       <introspection-schemas>*:@</introspection-schemas>
     </data-source>
   </component>

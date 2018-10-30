@@ -22,25 +22,14 @@ $(function(){
 	var navcon = $(".navcon").eq(0);
 	var navInner = $("#navcontent");
 	var navSlider = $("#slider");
-	navcon.find("li:gt(0)").mouseenter(function(){
-		var index = $(this).index()-1;
-	    navInner.children().eq(index).show().siblings().hide();
-	    navInner.children().eq(index).mouseenter(function(){
-	    	$(this).show();
-	    }).mouseleave(function(){
-			$(this).hide();
+	navcon.mouseenter(function(){
+		navcon.find("li").mouseenter(function(){
+			index = $(this).position().left
+			console.log(index)
+			navSlider.css({"left":index+18,"top":33,"z-index":10})
 		})
-	    navSlider.mouseenter(function(){
-	    	navInner.children().eq(index).show().siblings().hide();
-	    })
-	    console.log($(this).offset().left)
-	     console.log(navSlider.width())
-	      console.log($(this).width())
-	    console.log($(this).offset().left-navSlider.width()-$(this).width())
-	    navSlider.animate({left:($(this).offset().left-navSlider.width()-$(this).width()-31)},100);
-	}).mouseleave(function(){
-		navInner.children().hide();
-	})    
+	})
+    
     //导航栏吸顶
     var nav=$("#nav");
     if (nav.offset()) {

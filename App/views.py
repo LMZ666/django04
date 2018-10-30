@@ -23,6 +23,10 @@ def getCookie(request):
                 except:
                     print()
     return HttpResponse("999")
+def logout(request):
+    response = redirect("app:index")
+    response.delete_cookie("token")
+    return response
 # 返回主页
 def index(request):
     print("1")
@@ -48,15 +52,14 @@ def getPass(passwd):
 
 # 登录并且保存登录状态
 def login(request):
-    flag = True
     if request.method == "POST":
         account = request.POST.get("account")
         passwd = request.POST.get("passwd")
         print(account)
         print(passwd)
         # 数据库中存放的是加密后的passwd所以要用同样的方式对输入过来的passwd加密然后对比
-        user = User.objects.get(account=account, passwd=getPass(passwd))
-        if user:
+        try:
+            user = User.objects.get(account=account, passwd=getPass(passwd))
             response = redirect("app:index")
             # response.set_cookie("name",user.last().name)
             token = getToken(user.account)
@@ -65,15 +68,9 @@ def login(request):
             print(token)
             user.save()
             return response
-        else:
-            flag = False
+        except:
             response = redirect("app:login")
-            response.set_cookie("flag", flag)
             return response
-
-    response = render(request,"login.html",{"flag": flag})
-    response.delete_cookie("token")
-    return response
 
 
 # 注册并且保存登录状态

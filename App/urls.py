@@ -9,4 +9,5 @@ urlpatterns=[
     path("logout/",views.logout,name="logout"),
     path("imagecheck/",views.imageCheck,name="imagecheck"),
     path("getcookie/",views.getCookie),
+    path("logout/",views.logout,name="logout")
 ]
