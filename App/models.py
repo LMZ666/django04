@@ -9,3 +9,70 @@ class User(models.Model):
 
     class Meta:
         db_table="User"
+
+class Brandshow(models.Model):
+    img = models.CharField(max_length=100)
+    class Meta:
+        db_table="brandshow"
+
+# class Base
+# class Base(models.Model):
+#     img = models.CharField(max_length=100)
+#     content = models.CharField(max_length=100)
+#     price = models.CharField(max_length=10)
+#     class Meta:
+#         abstract=True
+#
+# class Gml(Base):
+#     pass
+# class Grv(Base):
+#     pass
+class SlideShow(models.Model):
+    img = models.CharField(max_length=150)
+
+    class Meta:
+        db_table="slideshow"
+
+class TimeLimit(models.Model):
+    img = models.CharField(max_length=100)
+    itemTitle = models.CharField(max_length=100)
+    itemSub = models.CharField(max_length=100)
+    newPrice = models.CharField(max_length=30)
+    oldPrice = models.CharField(max_length=20)
+    class Meta:
+        db_table="timelimit"
+
+class Popular(models.Model):
+    img = models.CharField(max_length=100)
+    title = models.CharField(max_length=100)
+    psnPrice = models.CharField(max_length=10)
+    psoPrice = models.CharField(max_length=10)
+    class Meta:
+        db_table="popular"
+
+# {
+# 		"img" : "img/popular/brand1.png",
+# 		"title" : "韩国 LANEIGE 兰芝水凝清盈精华水200ml/瓶  ",
+# 		"psnPrice" : "￥200",
+# 		"psoPrice" : "￥330"
+# 	}
+class Pbrand(models.Model):
+    img = models.CharField(max_length=100)
+    title = models.CharField(max_length=100)
+    psnPrice = models.CharField(max_length=10)
+    psoPrice = models.CharField(max_length=10)
+    repertoryNum = models.IntegerField(default=20)
+
+    class Meta:
+        db_table="pbrand"
+#
+# "img" : "img/gooddetail/rightview1.jpg",
+# 		"content" : "韩国 VDL SPF30/PA++立体璀璨持久粉底液30ml/瓶 ",
+# 		"price" : "¥129"
+class Grv(models.Model):
+    img = models.CharField(max_length=100)
+    content = models.CharField(max_length=200)
+    price = models.CharField(max_length=10)
+    class Meta:
+        db_table='grv'
+

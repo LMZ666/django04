@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85f6201c-f495-4719-be13-a4db00abb9c0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cf841247-9182-4623-b22e-df45464d8f50.xml" beforeDir="false" />
+    <list default="true" id="85f6201c-f495-4719-be13-a4db00abb9c0" name="Default Changelist" comment="改动不大，加了注销。。。">
+      <change afterPath="$PROJECT_DIR$/static/css/swiper.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/swiper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/goodsdetail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/shopcart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django04/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/django04/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django04/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django04/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/public.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/public.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/goodsdetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/goodsdetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register1.html" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,7 +29,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/django04$views.coverage" NAME="views Coverage Results" MODIFIED="1540810460842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/App" />
-    <SUITE FILE_PATH="coverage/django04$tests.coverage" NAME="tests Coverage Results" MODIFIED="1540524991681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/App" />
+    <SUITE FILE_PATH="coverage/django04$tests.coverage" NAME="tests Coverage Results" MODIFIED="1541147339177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/App" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -62,64 +68,75 @@
     <session id="233621130">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="16" />
-          <entry key="project.open.time.1" value="2" />
+          <entry key="project.closed" value="22" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="5" />
           <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.17" value="1" />
-          <entry key="project.open.time.2" value="3" />
+          <entry key="project.open.time.2" value="4" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="3" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="17" />
+          <entry key="project.opened" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="11" />
-          <entry key="html" value="4484" />
-          <entry key="js" value="2424" />
-          <entry key="md" value="10" />
-          <entry key="py" value="4297" />
-          <entry key="txt" value="140" />
+          <entry key="css" value="72" />
+          <entry key="html" value="7498" />
+          <entry key="js" value="3251" />
+          <entry key="md" value="48" />
+          <entry key="py" value="7453" />
+          <entry key="sql" value="16" />
+          <entry key="txt" value="168" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="11" />
-          <entry key="HTML" value="4484" />
-          <entry key="JavaScript" value="2424" />
-          <entry key="Markdown" value="10" />
-          <entry key="PLAIN_TEXT" value="140" />
-          <entry key="Python" value="4297" />
+          <entry key="CSS" value="72" />
+          <entry key="HTML" value="7498" />
+          <entry key="JavaScript" value="3251" />
+          <entry key="Markdown" value="48" />
+          <entry key="PLAIN_TEXT" value="168" />
+          <entry key="Python" value="7453" />
+          <entry key="SQL" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="2" />
+          <entry key="auth_user" value="1" />
+          <entry key="brandshow" value="4" />
+          <entry key="css" value="8" />
           <entry key="django_session" value="1" />
-          <entry key="html" value="35" />
+          <entry key="html" value="53" />
           <entry key="http" value="1" />
-          <entry key="js" value="35" />
+          <entry key="jpg" value="1" />
+          <entry key="js" value="51" />
           <entry key="json" value="2" />
-          <entry key="md" value="2" />
-          <entry key="py" value="55" />
-          <entry key="sql" value="7" />
-          <entry key="user" value="16" />
+          <entry key="md" value="4" />
+          <entry key="pbrand" value="1" />
+          <entry key="popular" value="5" />
+          <entry key="py" value="65" />
+          <entry key="slideshow" value="3" />
+          <entry key="sql" value="9" />
+          <entry key="timelimit" value="4" />
+          <entry key="user" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="2" />
-          <entry key="Database Element" value="17" />
-          <entry key="HTML" value="35" />
+          <entry key="CSS" value="8" />
+          <entry key="Database Element" value="42" />
+          <entry key="HTML" value="53" />
+          <entry key="Image" value="1" />
           <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="35" />
-          <entry key="Markdown" value="2" />
-          <entry key="Python" value="55" />
-          <entry key="SQL" value="5" />
+          <entry key="JavaScript" value="51" />
+          <entry key="Markdown" value="4" />
+          <entry key="Python" value="65" />
+          <entry key="SQL" value="7" />
           <entry key="Scratch" value="3" />
         </counts>
       </usages-collector>
@@ -128,69 +145,97 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="7" column="53" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/django04/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1660">
-              <caret line="83" column="23" selection-start-line="83" selection-start-column="23" selection-end-line="83" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/App/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="60" column="12" lean-forward="true" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-                <marker date="1540904428789" expanded="true" signature="293:815" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://2b09b564-13dd-4ce3-96e9-45ccf80ef004/schema/django04/table/user">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.7186742">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/App/urls.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="293">
+                  <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+                  <folding>
+                    <element signature="e#0#28#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/goodsdetail.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="295">
+                  <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/shopcart.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="166">
+                  <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="214">
+                  <caret line="36" column="74" lean-forward="true" selection-start-line="36" selection-start-column="74" selection-end-line="36" selection-end-column="74" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/templates/login.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="160">
+                  <caret line="7" column="89" lean-forward="true" selection-start-line="7" selection-start-column="89" selection-end-line="7" selection-end-column="89" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/templates/register.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="566">
+                  <caret line="62" column="62" selection-start-line="62" selection-start-column="60" selection-end-line="62" selection-end-column="62" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/App/models.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="290">
+                  <caret line="71" column="24" lean-forward="true" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
+                  <folding>
+                    <marker date="1541148699218" expanded="true" signature="2017:2192" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/App/tests.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="100">
+                  <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+                  <folding>
+                    <element signature="e#0#32#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -202,12 +247,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>登录</find>
-      <find>img</find>
       <find>&lt;img</find>
       <find>re</find>
       <find>register</find>
       <find>navSlider</find>
+      <find>user</find>
+      <find>litbrand</find>
+      <find>brandshow</find>
+      <find>slideshow</find>
+      <find>swiper</find>
+      <find>timeli</find>
+      <find>img</find>
+      <find>.img</find>
+      <find>p-show</find>
+      <find>lwing</find>
+      <find>class=&quot;pro-info&quot;</find>
+      <find>pro-pic</find>
+      <find>proPic</find>
+      <find>new</find>
+      <find>gallary</find>
+      <find>showInner</find>
+      <find>show-inner</find>
+      <find>.right-img</find>
+      <find>bg-img</find>
+      <find>.r-img-d</find>
+      <find>gall</find>
+      <find>right-img</find>
+      <find>add</find>
+      <find>pro-info</find>
+      <find>bar-item-txt</find>
+      <find>登录</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -222,27 +291,31 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/App/tests.py" />
         <option value="$PROJECT_DIR$/templates/header.html" />
         <option value="$PROJECT_DIR$/django04/urls.py" />
         <option value="$PROJECT_DIR$/templates/test.html" />
         <option value="$PROJECT_DIR$/templates/indextest.html" />
         <option value="79802f99-a6bc-410a-a457-9f19c9820c56/schema/main/table/user.sql" />
         <option value="$PROJECT_DIR$/templates/register.html" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/static/js/login.js" />
         <option value="$PROJECT_DIR$/templates/login.html" />
-        <option value="$PROJECT_DIR$/static/js/index.js" />
-        <option value="$PROJECT_DIR$/static/js/register.js" />
         <option value="$PROJECT_DIR$/static/css/public.css" />
         <option value="$PROJECT_DIR$/static/js/public.js" />
         <option value="$PROJECT_DIR$/django04/settings.py" />
         <option value="$PROJECT_DIR$/django04/__init__.py" />
-        <option value="$PROJECT_DIR$/App/models.py" />
         <option value="2b09b564-13dd-4ce3-96e9-45ccf80ef004/schema/django04/table/user.sql" />
-        <option value="$PROJECT_DIR$/App/urls.py" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/static/js/login.js" />
+        <option value="$PROJECT_DIR$/static/js/register.js" />
+        <option value="$PROJECT_DIR$/static/css/index.css" />
+        <option value="$PROJECT_DIR$/static/js/index.js" />
+        <option value="$PROJECT_DIR$/App/tests.py" />
+        <option value="$PROJECT_DIR$/static/js/goodsdetail.js" />
+        <option value="$PROJECT_DIR$/App/models.py" />
         <option value="$PROJECT_DIR$/App/views.py" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/App/urls.py" />
+        <option value="$PROJECT_DIR$/templates/shopcart.html" />
+        <option value="$PROJECT_DIR$/templates/goodsdetail.html" />
       </list>
     </option>
   </component>
@@ -253,10 +326,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="297" />
-    <option name="y" value="123" />
-    <option name="width" value="1440" />
-    <option name="height" value="795" />
+    <option name="x" value="75" />
+    <option name="y" value="129" />
+    <option name="width" value="1635" />
+    <option name="height" value="909" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -264,6 +337,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -290,7 +364,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -298,19 +371,21 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../django07test" />
+    <property name="database.data.extractors.current.id" value="SQL Inserts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\QianFengStudy\2Third\django04\static\json" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\QianFengStudy\2Third\django04\static\js" />
+      <recent name="F:\QianFengStudy\2Third\django04\static\css" />
       <recent name="F:\QianFengStudy\2Third\django04\templates" />
       <recent name="F:\QianFengStudy\2Third\django04\static" />
-      <recent name="F:\QianFengStudy\2Third\django04\static\js" />
+      <recent name="F:\QianFengStudy\2Third\django04\static\json" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\QianFengStudy\2Third\django04\static\json" />
     </key>
   </component>
@@ -428,7 +503,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.views">
+  <component name="RunManager" selected="Python.tests">
     <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="django04" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -503,8 +578,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.views" />
         <item itemvalue="Python.tests" />
+        <item itemvalue="Python.views" />
       </list>
     </recent_temporary>
   </component>
@@ -533,19 +608,26 @@
       <option name="project" value="LOCAL" />
       <updated>1540834182045</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="改动不大，加了注销。。。">
+      <created>1540918230279</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1540918230279</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16410671" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14470494" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3285968" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.22597864" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.23440453" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -554,7 +636,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3291815" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.24021353" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.3285968" />
       <window_info anchor="bottom" id="REST Client" order="14" weight="0.660746" />
@@ -562,15 +644,15 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32983023" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.19886823" />
+      <window_info anchor="right" id="Database" order="4" weight="0.36054972" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17219079" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3285968" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.22597864" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.23487544" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -579,7 +661,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3380783" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.3285968" />
       <window_info anchor="bottom" id="REST Client" order="14" weight="0.660746" />
@@ -587,7 +669,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32983023" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.19886823" />
+      <window_info anchor="right" id="Database" order="4" weight="0.016976556" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -599,67 +681,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="just a test for git on pycharm" />
     <MESSAGE value="this time i have update the password encode&#10;and add welcome information in index.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="this time i have update the password encode&#10;and add welcome information in index.html" />
+    <MESSAGE value="改动不大，加了注销。。。" />
+    <option name="LAST_COMMIT_MESSAGE" value="改动不大，加了注销。。。" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/json/brandshow.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/jquery-1.12.0.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-240" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/goodsdetail.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/json/g-r-v.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/index.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" selection-start-line="3" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/header.html" />
-    <entry file="file://$PROJECT_DIR$/django04/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/rest-api.http">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/jquery-3.3.1.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://E:/Virtualenv/djangoenv/Lib/site-packages/django/contrib/redirects/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-240">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/003a0874-4a70-463f-ae6e-f8b9c4c583f7/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://E:/Virtualenv/djangoenv/Lib/site-packages/django/shortcuts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -669,16 +694,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/indextest.html" />
     <entry file="das://79802f99-a6bc-410a-a457-9f19c9820c56/schema/main/table/user.sql" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="220">
-            <caret line="17" column="10" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/register1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -687,13 +702,6 @@
       </provider>
     </entry>
     <entry file="das://79802f99-a6bc-410a-a457-9f19c9820c56/schema/main/table/django_session" />
-    <entry file="file://$PROJECT_DIR$/templates/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://79802f99-a6bc-410a-a457-9f19c9820c56/schema/main/table/user" />
     <entry file="file://$PROJECT_DIR$/App/migrations/0003_auto_20181028_1146.py" />
     <entry file="file://$PROJECT_DIR$/App/migrations/0004_auto_20181028_1147.py" />
@@ -720,13 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/Virtualenv/djangoenv/Lib/hashlib.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="861">
@@ -742,13 +743,6 @@
       </provider>
     </entry>
     <entry file="das://cf841247-9182-4623-b22e-df45464d8f50/schema/main/table/user" />
-    <entry file="file://$PROJECT_DIR$/static/js/register.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/public.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -766,10 +760,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/models.py">
+    <entry file="file://$PROJECT_DIR$/static/js/public.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="44" lean-forward="true" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+        <state relative-caret-position="119">
+          <caret line="38" column="8" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -780,66 +774,202 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/public.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="38" column="8" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="7" column="53" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/django04/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1660">
+        <state relative-caret-position="300">
           <caret line="83" column="23" selection-start-line="83" selection-start-column="23" selection-end-line="83" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/index.js">
+    <entry file="file://$PROJECT_DIR$/static/js/register.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        <state relative-caret-position="340">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="100">
+            <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="das://2b09b564-13dd-4ce3-96e9-45ccf80ef004/schema/django04/table/user">
+    <entry file="file://E:/Virtualenv/djangoenv/Lib/site-packages/pymysql/cursors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="198" selection-start-line="198" selection-end-line="198" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/swiper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-900" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/swiper.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/goodsdetail.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/gooddetail/bg-img2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="das://2b09b564-13dd-4ce3-96e9-45ccf80ef004/schema/django04/table/brandshow">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/login.html">
+    <entry file="das://2b09b564-13dd-4ce3-96e9-45ccf80ef004/schema/django04/table/auth_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2b09b564-13dd-4ce3-96e9-45ccf80ef004/schema/django04/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="id" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="55" column="20" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
+        <state relative-caret-position="290">
+          <caret line="71" column="24" lean-forward="true" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
+          <folding>
+            <marker date="1541148699218" expanded="true" signature="2017:2192" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2b09b564-13dd-4ce3-96e9-45ccf80ef004/schema/django04/table/popular">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/goodsdetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="36" lean-forward="true" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2b09b564-13dd-4ce3-96e9-45ccf80ef004/schema/django04/table/timelimit">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2b09b564-13dd-4ce3-96e9-45ccf80ef004/schema/django04/table/pbrand">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2b09b564-13dd-4ce3-96e9-45ccf80ef004/schema/django04/table/slideshow">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="200" column="80" lean-forward="true" selection-start-line="200" selection-start-column="80" selection-end-line="200" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-634">
+          <caret line="69" column="9" lean-forward="true" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="62" column="62" selection-start-line="62" selection-start-column="60" selection-end-line="62" selection-end-column="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/App/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="60" column="12" lean-forward="true" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="12" />
+        <state relative-caret-position="563">
+          <caret line="170" selection-start-line="170" selection-end-line="170" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1540904428789" expanded="true" signature="293:815" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/goodsdetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/shopcart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="36" column="74" lean-forward="true" selection-start-line="36" selection-start-column="74" selection-end-line="36" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="7" column="89" lean-forward="true" selection-start-line="7" selection-start-column="89" selection-end-line="7" selection-end-column="89" />
         </state>
       </provider>
     </entry>

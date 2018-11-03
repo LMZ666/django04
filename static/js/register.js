@@ -6,20 +6,26 @@ $(function(){
     var account = $("#rePh")
     var m1 = $("#m1")
     var m2 = $("#m2")
-    function changeCode(){
+    account.blur(function(){
+        $.get("/getusers/",data={"account":account.val()},function(data){
+            if (data==="True"){
+                alert("用户已经存在！")
+                account.val("")
+                account.attr("focus","true")
+            }
+        })
+    })
+    // 图形验证码
+        function changeCode(){
         $.get("/imagecheck/",function(data){
-            console.log($.cookie("code"))
             imgCode.attr("src","/imagecheck/")
+            console.log($.cookie("code"))
         },
         );
     }
-    // 图形验证码
-    change.click(changeCode)
     imgCode.click(changeCode)
     codeinput.blur(function(){
-        console.log($.cookie("code"))
-        console.log($(this).val())
-        if ($(this).val().lower!==$.cookie("code").lower){
+        if ($(this).val().toLowerCase()!==$.cookie("code").toLowerCase()){
             changeCode()
             alert("请重新输入！")
         }

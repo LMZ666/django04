@@ -1,44 +1,15 @@
 $(function(){
 	//商品详情主题
 	var showInner = $(".show-inner");
-	var prev = $(".prev");
-	var next = $(".next");
 	var bgImg = $(".bg-img");
 
 	showInner.children().mouseenter(function(){
 		var index = $(this).index();
 		$(this).addClass("pactive").siblings().removeClass("pactive");
-		bgImg.find("img").attr("src","img/gooddetail/bg-img"+ (index+1) +".jpg");
-		_bigImg.attr("src","img/gooddetail/bg-img"+ (index+1) +".jpg");
-		prev.click(function(){
-			showInner.children().eq(index-1).addClass("pactive").siblings().removeClass("pactive");
-//			bgImg.find("img").attr("src","img/gooddetail/bg-img"+ (index+1) +".jpg");
-			console.log(index-1)
-		})
-		next.click(function(){
-			showInner.children().eq(index+1).addClass("pactive").siblings().removeClass("pactive");
-			bgImg.find("img").attr("src","img/gooddetail/bg-img"+ (index+1) +".jpg");
-			console.log(index+1)
-		})
+		bgImg.find("img").attr("src","../../static/img/gooddetail/bg-img"+ (index+1) +".jpg");
+		_bigImg.attr("src","../../static/img/gooddetail/bg-img"+ (index+1) +".jpg");
 	})
-	
-	//右侧商品
-	var rightImg = $(".right-img");
-	var rImgContent = $(".r-img-d");
-	var rPrice = $(".price");
-	var rightView = $(".right-view");
-	var rImgd = $(".r-img-d");
-	$.getJSON("json/g-r-v.json",function(data){
-		for(var i=0; i<data.length; i++){
-			var obj =data[i];
-			img = $("<img src=" + obj.img + " />");
-			content = obj.content;
-			price = obj.price;
-			rightImg.eq(i).append(img);
-			rImgContent.eq(i).append(content);
-			rPrice.eq(i).append(price);
-		}
-	})
+
 
 	rightView.find('li').mouseenter(function(){
 		$(this).children("div").show();

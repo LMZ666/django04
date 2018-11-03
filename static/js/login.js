@@ -3,26 +3,24 @@ $(function(){
 	var telAry = /^1(3|5|4|7|8)\d{9}$/;
 	var mailAry = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
 	var stop = $(".stop").eq(0);
-	var picCode = $(".picCode").eq(0);
-	var code = $(".code").eq(0);
-	var change = $(".change").eq(0);
-	var p = $("<p></p>");
-	var exist = true;
 	var checkCode = $("input[name='checkCode']")
 	var loginBtn = $(".loginBtn")
 	//用户名验证
 	if($.cookie("flag")){
 		alert("账号或密码错误")
 	}
-	name.children().blur(function(){
-		if(!telAry.test(name.children().val()) && !mailAry.test(name.children().val())){
-			$(this).parent().animate({left:"15px"},500);
-			$(this).parent().animate({left:"-15px"},500);
-			$(this).parent().animate({left:"0px"},500);
-			stop.show();
-			stop.delay(2000).hide(0);
-		}
-	})
+	// name.children().blur(function(){
+	// 	if(!telAry.test(name.children().val()) && !mailAry.test(name.children().val())){
+	// 		$(this).parent().animate({left:"15px"},500);
+	// 		$(this).parent().animate({left:"-15px"},500);
+	// 		$(this).parent().animate({left:"0px"},500);
+	// 		stop.show();
+	// 		stop.delay(2000).hide(0);
+	// 	}
+	// })
+
+	// 匹配账号字段
+
 	function checkcode(){
 		$.get("/imagecheck/",
 			function (data) {
