@@ -4,6 +4,21 @@ body{width: 100%;height: 100%;}
 a{text-decoration: none;}
 ul{list-style: none;}
 
+.mycart{
+    width: 30%;
+    height: 50%;
+    float: left;
+    background: greenyellow;
+}
+.mycart img {
+    float: left;
+    height: 100%;
+}
+.mycart .gooddetail{
+    float: left;
+    background: lightyellow;
+}
+
 /*top开始*/
 #top{width: 100%;height: 33px;background: #f2f2f2;}
 #top a:hover{color: orangered;}

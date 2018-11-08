@@ -1,4 +1,74 @@
 @charset "utf-8";
+.remajor{
+	width: 15rem;
+	margin: auto;
+}
+.form-horizontal{
+	width: 40rem;
+	margin: auto;
+
+}
+.form-group span{
+	display: none;
+}
+.form-group i{
+	display: none;
+	color: red;
+	font-size: 1rem;
+}
+
+form .form-group{
+	margin: 10px;
+	width:40rem;
+}
+form input{
+	margin-bottom: 2rem;
+}
+#imagecode{
+	float: left;
+	width:60%;
+}
+.form-group img{
+	float: right;
+	width: 30%;
+	height: 100%;
+}
+.input-group{
+	width: 100%;
+}
+#submit,#btn{
+	height: 4rem;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background: #d58512;
+}
+#file{
+	margin-top: 20px;
+}
+#submit{
+	margin-top: 20px;
+}
+#file{
+	font-weight: 800;
+}
+#file input{
+	height: 100%;
+}
+.upload{ padding: 4px 10px; height: 20px; line-height: 20px; position: relative; border: 1px solid #999; text-decoration: none; color: #666; }
+
+.change{ position: absolute; overflow: hidden; right: 0; top: 0; opacity: 0; }
+#imagecode{
+	margin: 10px;
+}
+
+.lg-logo{
+	padding-top: 30px;
+}
+.lg-mark h3{
+	text-align: center;
+}
+
 .re-major ul li{margin: 15px auto;position: relative;}
 
 .phoneCode{background: none;border: none;}

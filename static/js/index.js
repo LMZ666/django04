@@ -1,15 +1,21 @@
 $(function () {
-    var slide = $("#slide");
-    var btn = $("#btn");
-    var btnLi = $("#btn li");
-    $.get("/getcookie/", data = {"token": $.cookie("token")}, function (data) {
-        if (data === "999") {
-            alert("用户未登录")
-        }
-        else {
-            alert("欢迎" + data)
-        }
-    })
+    // 并不适用，由于在此处使用的是session会话技术，导致cookie中存储的sessionid
+    // $.get("/getcookie/", data = {"token": $.cookie("sessionid")}, function (data) {
+    //     if (data === "999") {
+    //         console.log(data)
+    //         console.log($.cookie("token"))
+    //         alert("用户未登录")
+    //         $("#name").html("登录")
+    //         $("#name").prev().hide()
+    //         $("#name").next().html("注册")
+    //     }
+    //     else {
+    //         $("#name").prev().html(data.user.name)
+    //         $("#name").html("欢迎"+data.user.name)
+    //         alert("欢迎" + data.user.name)
+    //     }
+    // })
+
     //轮播图
     new Swiper('.swiper-container', {
         spaceBetween: 5,

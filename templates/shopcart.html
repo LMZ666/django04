@@ -94,7 +94,18 @@
 		</div>
 		
 		<div class="cart-no-list">
-			<p>购物车空空如也，再去逛逛吧!</p>
+            {% for cart in carts %}
+            <div class="mycart">
+                <img src="{% static cart.goods.img %}">
+            <div class="gooddetail">
+                {{ cart.goods.title }}
+                {{ cart.goods.psnPrice }}
+                {{ cart.num }}
+            </div>
+            </div>
+            {% endfor %}
+            
+
 		</div>
 		
 		<div id="footer">

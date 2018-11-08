@@ -282,7 +282,7 @@ $(function(){
 	cartFoot = $("<div class='cart-foot'></div>");
 	summaryBox =$("<div class='summary-box'></div>");
 	rpadBox = $("<div class='rpad'><span>已选</span><span class='total-select-amount'>"+ cartsnum +"</span><span>件直邮商品</span></div>")
-	rpad = $("<div class='rpad-sel'><span class='total-money'>商品总额</span><strong class='size24'>¥<font id='price_total'>"+ cartstotalprice +"</font></strong></div>")
+	rpad = $("<div class='rpad-sel'><span class='total-money'>商品总额</span><strong class='size24'>¥<fonts id='price_total'>"+ cartstotalprice +"</fonts></strong></div>")
 	btnOrange = $("<a class='btn-orange'>境外结算</a>");
 	summaryBox.append(rpadBox,rpad,btnOrange);
 	cartFoot.append(summaryBox);

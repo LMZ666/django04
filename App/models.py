@@ -6,6 +6,7 @@ class User(models.Model):
     account = models.CharField(max_length=20)
     passwd = models.CharField(max_length=80)
     token = models.CharField(max_length=256,null=True,default=" ")
+    img = models.CharField(max_length=256,default="img/headimg/a21345a2-e8b8-42fc-82da-0901885ff2ca.png")
 
     class Meta:
         db_table="User"
@@ -75,4 +76,13 @@ class Grv(models.Model):
     price = models.CharField(max_length=10)
     class Meta:
         db_table='grv'
+
+class Carts(models.Model):
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
+    # 此处没有goods这个类我其实关联的是Pbrand
+    goods = models.ForeignKey(Pbrand,on_delete=models.CASCADE)
+    num = models.IntegerField()
+    class Meta:
+        db_table="carts"
+
 

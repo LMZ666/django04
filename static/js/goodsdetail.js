@@ -1,7 +1,48 @@
 $(function(){
 	//商品详情主题
+	$(".num").val("1")
 	var showInner = $(".show-inner");
 	var bgImg = $(".bg-img");
+	//购物车添加
+	$("#add").click(function(){
+		if($(this).css("cursor")=="not-allowed"){
+			return
+		}
+		$(".num").val(1+parseInt($(".num").val()))
+		if($("#num").attr("num")==$(".num").val()){
+			$(this).css({"color":"#eee","cursor":"not-allowed"})
+		}
+		if(parseInt($(".num").val())>=2){
+			$(".decrease").css({"color":"#000","cursor":"pointer"})
+		}
+	})
+	$(".decrease").click(function(){
+		console.log($(this).css("cursor"))
+		if($(this).css("cursor")=="not-allowed"){
+			return
+		}
+
+		$(".num").val(parseInt($(".num").val())-1)
+		if(parseInt($(".num").val())<parseInt($("#num").attr("num")))
+		if($(".num").val()=="1"){
+			$(this).css({"cursor":"not-allowed","color":"#eee"})
+
+		}
+
+	})
+	// 添加到购物车
+	$(".btn-cart").click(function(){
+		var num = $(".num").val()
+		var goodid =$(".num").attr("goodid")
+		var data = {"num":num,"goodid":goodid}
+		$.get("/addtocart/",data,function(data){
+			console.log(data["msg"])
+			window.open("/goodsdetail/"+$(".num").attr("goodid")+"/",target="_self")
+		})
+	})
+
+
+
 
 	showInner.children().mouseenter(function(){
 		var index = $(this).index();
@@ -155,114 +196,6 @@ $(function(){
 		triangledown.show();
 	})
 	
-	//购物车添加
-	var btnCart = $(".btn-cart");
-	var offset = $(".bar-item-cart").offset();  //结束的地方的元素
-	var btnoffset = btnCart.offset();
-	var cartNum = $(".cart-num");
-	var j = 0;
-	var dTitle = $(".d-title").children().last();
-	var sum = 0;	
-	btnCart.click(function(event){
-		var addcar = $(this);
-		var img = _smallImg.find('img').attr('src');
-		var flyer = $('<img class="u-flyer" src="'+img+'">');
-//		cartNum.html(++j);
-		flyer.fly({
-			start: {
-				left: btnoffset.left,
-				top: (btnoffset.top - $(document).scrollTop())
-			},
-			
-			end: {
-				left: offset.left,
-				top: 324,
-				width: 0,
-				height: 0
-			}
-		});
-		
-		var carts = $.cookie("carts") ? JSON.parse($.cookie("carts")) : [];
-		for(var i=0; i<carts.length; i++){
-			sum = cartNum.html();
-			if(dTitle.html() == carts[i].name){
-				sum++
-				num = parseInt(cartNum.html());		
-				var num = parseInt(carts[i].num);
-				num++;
-				console.log(num)
-				carts[i].num = num;
-				carts[i].totalprice = ($(".newPrice").html()) * num;
-				cartNum.html(sum);
-				$.cookie("carts", JSON.stringify(carts), {expires:30, path:"/"});
-				return;
-			}
-		}
-			
-		var cart = {
-			img : $(".show-inner").find("img").eq(0).attr("src"),
-			name : dTitle.html(),
-			spec : $(".sku-selected").html(),
-			unitprice : $(".newPrice").html(),
-			num : $(".num").val(),
-			totalprice : $(".num").val()*$(".newPrice").html()
-		}
-		carts.push(cart);
-		$.cookie("carts", JSON.stringify(carts), {expires:30, path:"/"});
-		console.log($.cookie("carts"));
-	});
-	
-	
 
-	$("#another").click(function(){
-		var carts = $.cookie("carts") ? JSON.parse($.cookie("carts")) : [];	
-		sum = cartNum.html();
-		console.log(sum)
-		for(var i=0; i<carts.length; i++){
-			if($(".d-title").children().first().html() == carts[i].name){
-				sum++ ;
-				var num = parseInt(carts[i].num);
-				num++;			
-				carts[i].num = num;
-				carts[i].totalprice = ($(".newPrice").html()) * num;
-				cartNum.html(sum);
-				$.cookie("carts", JSON.stringify(carts), {expires:30, path:"/"});
-				
-				console.log(carts[i].sum)
-				return;
-			}
-			
-		}
-		
-		var cart = {
-			img : $(".show-inner").find("img").eq(0).attr("src"),
-			name : $(".d-title").children().first().html(),
-			spec : $(".sku-selected").html(),
-			unitprice : $(".newPrice").html(),
-			num : $(".num").val(),
-			totalprice : $(".num").val()*$(".newPrice").html()
-		}
-		carts.push(cart);
-		$.cookie("carts", JSON.stringify(carts), {expires:30, path:"/"});
-		
-	})
-	
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	var carts = $.cookie("carts");
-	carts = JSON.parse(carts);
-	for(var i=0; i<carts.length; i++){
-		cartNum.html(carts[i].num);
-	}
-	
-	
 })

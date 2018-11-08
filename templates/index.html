@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8"/>
     <title>帮海贝全球购_跨境电商第一站_海外直采_海外直邮</title>
-    <link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}"/>
     <link rel="stylesheet" type="text/css" href="{% static "css/public.css" %}"/>
     <link rel="stylesheet" href=" {% static "css/swiper.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}"/>
     <script type="text/javascript" src="{% static "js/jquery-3.3.1.min.js" %}"></script>
     <script type="text/javascript" src="{% static "js/jquery.cookie.js" %}"></script>
     <script type="text/javascript" src="{% static "js/public.js" %}"></script>
@@ -29,15 +29,16 @@
             <a href="#" class="loginQQ"><img src="{% static 'img/top/QQ.png' %}"/></a>
             <a href="#" class="loginWeixin"><img src="{% static 'img/top/微信.png' %}"/></a>
             <a href="#" class="loginWeibo"><img src="{% static 'img/top/微博.png' %}"/></a>
-            {% if name %}
-                <a style="font-size: 12px;text-align: center">欢迎你:{{ name }}</a>
+            {% if users %}
+                <a href="javascript:" class="user">{{ users.name }}</a>
                 <a style="font-size: 12px" href="{% url "app:logout" %}" class="user">注销</a>
             {% else %}
-                <a href="{% url "app:login" %}" class="user" id="userName">登录</a>
+                <a href="{% url "app:login" %}" class="user" id="name">登录</a>
                 <a href="{% url "app:register" %}" class="register">注册</a>
             {% endif %}
 
             <a href="#" class="phone"><span></span>手机版</a>
+
         </div>
         <div class="message">
             <h2>我的消息</h2>
