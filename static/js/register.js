@@ -1,5 +1,6 @@
 $(function(){
     // 验证码切换
+    console.log("haha")
     $.get("/imagecheck/",function(data){
         console.log(data)
         $("#imgcheck").attr("src", "/"+data)

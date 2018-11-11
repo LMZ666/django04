@@ -85,4 +85,22 @@ class Carts(models.Model):
     class Meta:
         db_table="carts"
 
+class Order(models.Model):
+    identify = models.CharField(max_length=100)
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
+    createtime = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table="order"
+
+class OrderGoods(models.Model):
+    goods = models.ForeignKey(Pbrand,on_delete=models.CASCADE)
+    order = models.ForeignKey(Order,on_delete=models.CASCADE)
+    num = models.IntegerField()
+    class Meta:
+        db_table="ordergoods"
+
+
+
+
 

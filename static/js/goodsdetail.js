@@ -21,7 +21,7 @@ $(function(){
 		if($(this).css("cursor")=="not-allowed"){
 			return
 		}
-
+		$("#add").css({"cursor":"pointer","color":"#000"})
 		$(".num").val(parseInt($(".num").val())-1)
 		if(parseInt($(".num").val())<parseInt($("#num").attr("num")))
 		if($(".num").val()=="1"){
@@ -34,10 +34,15 @@ $(function(){
 	$(".btn-cart").click(function(){
 		var num = $(".num").val()
 		var goodid =$(".num").attr("goodid")
+		console.log("haha")
+		if($(".user").html()=="登录"){
+			alert("用户未登录，请登录后操作")
+			window.open("/login/",target="_self")
+			return
+		}
 		var data = {"num":num,"goodid":goodid}
 		$.get("/addtocart/",data,function(data){
-			console.log(data["msg"])
-			window.open("/goodsdetail/"+$(".num").attr("goodid")+"/",target="_self")
+			$("#num").html(data["goodsnum"])
 		})
 	})
 
@@ -47,18 +52,11 @@ $(function(){
 	showInner.children().mouseenter(function(){
 		var index = $(this).index();
 		$(this).addClass("pactive").siblings().removeClass("pactive");
-		bgImg.find("img").attr("src","../../static/img/gooddetail/bg-img"+ (index+1) +".jpg");
-		_bigImg.attr("src","../../static/img/gooddetail/bg-img"+ (index+1) +".jpg");
+		bgImg.find("img").attr("src","/static/img/gooddetail/bg-img"+ (index+1) +".jpg");
+		_bigImg.attr("src","/static/img/gooddetail/bg-img"+ (index+1) +".jpg");
 	})
 
 
-	rightView.find('li').mouseenter(function(){
-		$(this).children("div").show();
-		$(this).siblings().children("div").hide();
-	}).mouseleave(function(){
-		$(this).children("div").hide();
-	})
-	
 	
 	//放大镜
 	var _smallImg = $(".bg-img"); //小图
@@ -112,10 +110,11 @@ $(function(){
 	//相关产品
 	var product = $(".product");
 	
-	$.getJSON("json/g-m-l.json",function(data){
+	$.getJSON("../../static/json/g-m-l.json",function(data){
 		for(var i=0; i<data.length; i++){
 			var obj = data[i];
-			img = $("<img src="+ obj.img + "/>");
+			img = $("<img/>");
+			img.attr("src","/static/"+obj.img)
 			a = $("<a href='#'></a>");
 			divContent = $("<div></div>");
 			divPrice = $("<div></div>");
@@ -136,10 +135,11 @@ $(function(){
 	var parmasImg = $(".parmasImg");
 	var parmasList = $(".parmasList");
 	
-	$.getJSON("json/g-m-r.json",function(data){
+	$.getJSON("../../static/json/g-m-r.json",function(data){
 		for(var i=0; i<data.length; i++){
 			var obj= data[i];
-			img= $("<img src="+ obj.img +"/>");
+			img= $('<img/>');
+			img.attr("src","/static/"+obj.img)
 			address = $("<li>"+ obj.address +"</li>");
 			brand = $("<li>"+ obj.brand +"</li>");
 			fit = $("<li>"+ obj.fit +"</li>");

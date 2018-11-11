@@ -4,21 +4,121 @@ body{width: 100%;height: 100%;}
 a{text-decoration: none;}
 ul{list-style: none;}
 
+.header{
+    width: 90%;
+    height: 10%;
+    margin-left: 60px;
+    background: gray;
+    line-height: 50px;
+}
+.header label{
+    margin-left: 170px;
+}
+.header .selectAll{
+    margin-left: 10px;
+}
+.cart-no-list{
+    overflow:scroll;
+    overflow-x:hidden;
+}
 .mycart{
-    width: 30%;
-    height: 50%;
-    float: left;
+    margin-bottom: 5px;
+    border-radius: 10%;
+    border:2px solid gray;
+    line-height: 300px;
+    width: 100%;
+    height: 30%;
     background: greenyellow;
 }
-.mycart img {
+.mycart .isselect{
     float: left;
-    height: 100%;
-}
-.mycart .gooddetail{
-    float: left;
-    background: lightyellow;
+    height: 95%;
+    margin-left: 10px;
 }
 
+.mycart img {
+    float: left;
+    margin-top: 10px;
+    margin-left: 3%;
+    width: 13%;
+    height: 80%;
+}
+.mycart *{
+
+    display: inline-block;
+    height: 100%;
+    line-height: 120px;
+}
+.title1{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 200px;
+}
+.price1{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-left: 10px;
+}
+.mycart .subminu{
+
+    position: relative;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    margin-left: 160px;
+    margin-bottom: 60px;
+}
+
+.subminu .num1{
+    width: 40px;
+    float: left;
+    line-height: 30px;
+    text-align: center;
+    height: 20px;
+}
+.subminu label{
+    display: inline-block;
+    float:left;
+    text-align: center;
+    height: 16px;
+    width: 16px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    border: 1px solid gray;
+    background: #eee;
+}
+.littesum{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+     margin-left: 120px;
+}
+.del{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-left: 160px;
+    color: red;
+    cursor:pointer;
+
+}
+.pay{
+    position: absolute;
+    right: 100px;
+}
+.sumAll{
+    line-height: 32px;
+    float: left;
+    font-size: 30px;
+    color: red;
+    margin-right: 20px;
+}
+.btn-danger{
+    float: left;
+
+}
 /*top开始*/
 #top{width: 100%;height: 33px;background: #f2f2f2;}
 #top a:hover{color: orangered;}
@@ -73,11 +173,9 @@ ul{list-style: none;}
 .cart-content .porces3{width: 130px;}  
 .ziticolo1{color: #ff5e00;font-size: 12px;}
 .porces2 .ziticolo1,.porces3 .ziticolo1{color: #999;}
-.cart-no-list{width: 1200px;height: 280px;margin: auto;border: 1px solid #ddd;box-shadow: 0 0 1px 1px #e6e6e5;border-radius: 4px;
-    border-top: 7px solid #f7caa3;margin-bottom: 110px;}
-.cart-no-list p{margin-top: 130px;line-height: 20px;font-size: 20px;font-family: "\5FAE\8F6F\96C5\9ED1";
-    color: #666;text-align: center;font-weight: bold;}
-/*head结束*/
+.cart-no-list{width: 90%;height: 500px;margin: auto;border: 1px solid #ddd;box-shadow: 0 0 1px 1px #e6e6e5;border-radius: 4px;
+    box-sizing: border-box;
+    border-top: 7px solid #f7caa3;margin-bottom: 10px;}
 
 /*cart-main开始*/
 .major{width: 1200px;

@@ -2,7 +2,8 @@ $(function(){
 	var checkCode = $("input[name='checkCode']")
 	var loginBtn = $(".loginBtn")
 	//用户名验证
-	if($.cookie("flag")){
+	console.log($.cookie("flag"))
+	if($.cookie("flag")=="1"){
 		alert("账号或密码错误")
 	}
 	// name.children().blur(function(){
@@ -16,7 +17,10 @@ $(function(){
 	// })
 
 	// 匹配账号字段
-
+		$.get("/imagecheck/", function (data) {
+				$("#im").attr("src", "/"+data)
+			}
+		)
 	function checkcode(){
 		$.get("/imagecheck/", function (data) {
 				$("#im").attr("src", "/"+data)

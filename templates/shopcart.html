@@ -6,6 +6,7 @@
 		<title>购物车</title>
 		<link rel="stylesheet" href="{% static "css/shopcart.css" %}" />
 <!--		<link rel="stylesheet" href="css/public.css"/>-->
+        <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
 		<script type="text/javascript" src="{% static "js/jquery-1.12.0.js" %}" ></script>
 		<script type="text/javascript" src="{% static 'js/jquery.cookie.js' %}" ></script>
 		<script type="text/javascript" src="{% static 'js/shopcart.js' %}" ></script>
@@ -23,8 +24,13 @@
 					<a href="#" class="loginQQ"><img src="{% static 'img/top/QQ.png' %}"/></a>
 					<a href="#" class="loginWeixin"><img src="{% static 'img/top/微信.png' %}"/></a>
 					<a href="#" class="loginWeibo"><img src="{% static 'img/top/微博.png' %}"/></a>
-					<a href="{% url "app:login" %}" class="user" id="userName">登录</a>
-					<a href="{% url "app:register" %}" class="register">注册</a>
+					{% if users %}
+                <a href="javascript:" class="user">{{ users.name }}</a>
+                <a style="font-size: 12px" href="{% url "app:logout" %}" class="user">注销</a>
+            {% else %}
+                <a href="{% url "app:login" %}" class="user" id="name">登录</a>
+                <a href="{% url "app:register" %}" class="register">注册</a>
+            {% endif %}
 					<a href="#" class="phone"><span></span>手机版</a>
 				</div>
 				
@@ -92,22 +98,40 @@
 				</span>
 			</p>
 		</div>
-		
+		<div class="header">
+            <label id="All" class="selectAll">
+                <input type="checkbox">
+                全选
+            </label>
+            <label>商品</label>
+            <label>单价</label>
+            <label>数量</label>
+            <label>小计</label>
+            <label>操作</label>
+        </div>
 		<div class="cart-no-list">
+
             {% for cart in carts %}
             <div class="mycart">
+                <input type="checkbox" cartid="{{ cart.id }}" class="isselect">
                 <img src="{% static cart.goods.img %}">
-            <div class="gooddetail">
-                {{ cart.goods.title }}
-                {{ cart.goods.psnPrice }}
-                {{ cart.num }}
-            </div>
+                <div class="title1">{{ cart.goods.title }}</div>
+                <div class="price1">{{ cart.goods.psnPrice }}</div>
+                <div class="subminu">
+                    <label cartid="{{ cart.id }}" class="minus glyphicon glyphicon-minus"></label>
+                    <span class="num1" >X{{ cart.num }}</span>
+                    <label cartid="{{ cart.id }}" class="add glyphicon glyphicon-plus"></label>
+                </div>
+
+                <div class="littesum">1</div>
+                <div class="del" cartid="{{ cart.id }}">删除</div>
             </div>
             {% endfor %}
-            
-
 		</div>
-		
+        <div class="pay">
+            <div class="sumAll"></div>
+            <div class="btn btn-danger">确认付款</div>
+        </div>
 		<div id="footer">
 			<div class="footer-links">
 				<a target="_blank" class="fitem" href="http://www.b5cai.com/">帮5采</a> |<a target="_blank" class="fitem" href="http://www.b5m.com/">帮海贝</a> |<!-- a target="_blank" class="item" href="http://job.b5m.com/">加入我们</a> | --><a target="_blank" class="fitem" href="http://app.b5m.com">移动应用</a> |<a target="_blank" class="fitem" href="http://u.b5m.com">广告联盟</a> |<a target="_blank" class="fitem" href="http://www.b5m.com/agreement.html">使用条款</a> 

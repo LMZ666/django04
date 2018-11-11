@@ -2,13 +2,14 @@ import hashlib
 import io
 import os
 import random
+import time
 import uuid
 
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 # Create your views here.
-from App.models import User, SlideShow, TimeLimit, Popular, Pbrand, Grv, Carts
+from App.models import User, SlideShow, TimeLimit, Popular, Pbrand, Grv, Carts, OrderGoods, Order
 
 slideshow = SlideShow.objects.all()
 timelimit = TimeLimit.objects.all()
@@ -18,11 +19,17 @@ grv = Grv.objects.all()
 # 商品详情页
 def goodsdetail(request,num):
     goods = pbrands.get(pk=num)
+    token = request.session.get("token")
     data = {
         "grv": grv,
         "goods": goods
-
     }
+    try:
+        user = User.objects.get(token=token)
+        data["users"] = user
+    except:
+        pass
+
     return render(request, "goodsdetail.html",context=data)
 
 # 返回主页
@@ -100,8 +107,10 @@ def login(request):
             response = redirect("app:login")
             response.set_cookie("flag",1)
             return response
-
-    return render(request,"login.html")
+    response = render(request,"login.html")
+    response.set_cookie("flag",0)
+    print(request.COOKIES.get("flag"))
+    return response
 
 
 # 注册并且保存登录状态
@@ -157,9 +166,7 @@ def shopcart(request):
     token = request.session.get("token")
     user = User.objects.get(token=token)
     carts = Carts.objects.filter(user=user)
-
-    return render(request,'shopcart.html',{"carts":carts})
-
+    return render(request,'shopcart.html',{"carts":carts,"users":user})
 
 def imgCheck(requset):
     # 判断在你存储验证码的文件夹下图片的数量，如果图片数量大于五就会将文件夹下的图片全都删除
@@ -204,6 +211,9 @@ def imgCheck(requset):
     response.set_cookie("imgcode", text, max_age=60 * 10)
     return response
 
+
+
+
 def getAccount(request):
     account = request.GET.get("account")
     data={
@@ -226,14 +236,77 @@ def toCart(request):
     goods.save()
     token = request.session.get("token")
     user = User.objects.get(token=token)
-    cart = Carts.objects.filter(user=user, goods=goods)
+    cart = Carts.objects.filter(goods=goods, user=user)
+    print(cart)
     if cart:
         cart = cart.first()
         cart.num = cart.num + int(num)
         cart.save()
+        print(cart)
     else:
         cart = Carts()
         cart.num = int(num)
         cart.goods = goods
         cart.user = user
-    return JsonResponse({"msg":"保存成功"})
+        cart.save()
+        print(cart)
+    return JsonResponse({"msg":"保存成功","cartnum":cart.num,"goodsnum":goods.repertoryNum})
+
+
+def add(request):
+    cartid = request.GET.get("cartid")
+    cart = Carts.objects.get(pk=cartid)
+    cart.num +=1
+    cart.save()
+    responsedata = {
+        "msg":"add success",
+        "cartnum":cart.num,
+    }
+    return JsonResponse(responsedata)
+
+
+def minus(request):
+    cartid = request.GET.get("cartid")
+    cart = Carts.objects.get(pk=cartid)
+    cart.num -=1
+    cart.save()
+    responsedata = {
+
+        "cartnum":cart.num,
+        "msg":"minus success"
+    }
+    return JsonResponse(responsedata)
+
+def delall(request):
+    cartid = request.GET.get("cartid")
+    cart = Carts.objects.get(pk=cartid)
+    cart.delete()
+    return JsonResponse({"msg":"del success"})
+
+# def
+def addorder(request):
+
+    cartids = request.GET.getlist("cartids")
+    print(cartids)
+    order = Order()
+    token = request.session.get("token")
+    user = User.objects.get(token=token)
+    order.user = user
+    order.identify = str(int(time.time()))+str(random.randrange(10000,100000))
+    print("".join(order.identify.split(".")))
+    order.identify = "".join(order.identify.split("."))
+    order.save()
+    for cartid in cartids:
+        cart = Carts.objects.get(pk=cartid)
+        ordergoods = OrderGoods()
+        ordergoods.order = order
+        ordergoods.goods = cart.goods
+        ordergoods.num = cart.num
+        ordergoods.save()
+        cart.delete()
+
+    return JsonResponse({"msg":"下单成功"})
+
+def showOrder(request):
+    orders = Order.objects.all()
+    return render(request,"order.html/",{"orders":orders})

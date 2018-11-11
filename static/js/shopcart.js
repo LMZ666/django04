@@ -1,7 +1,149 @@
 $(function(){
+
+	$(".mycart").each(function(){
+		$(this).find(".littesum").html(parseInt($(this).find(".price1").html().substring(1))*parseInt($(this).find(".num1").html().substring(1)))
+	})
+        function sum(){
+        var sum=0
+        $(".littesum").each(function(){
+            sum+=parseInt($(this).html())
+        })
+        $(".sumAll").html("￥"+sum)
+
+    }
+    sum()
+		$(".add").click(function(){
+			console.log($(this).attr("cartid"))
+			var cartid = $(this).attr('cartid')
+			var data={
+				"cartid":cartid
+			}
+			var this_ = $(this)
+			$.get("/add/",data,function (data) {
+				this_.prev().html('X'+data["cartnum"])
+				this_.parent().next().html(parseInt(this_.parent().prev().html().substring(1))*data['cartnum'])
+                sum()
+            })
+		})
+
+		$(".minus").click(function(){
+			console.log($(this).attr("cartid"))
+			var cartid = $(this).attr('cartid')
+			var data={
+				"cartid":cartid
+			}
+			var this_= $(this)
+			$.get("/minus/",data,function (data) {
+				this_.next().html('X'+data["cartnum"])
+				this_.parent().next().html(parseInt(this_.parent().prev().html().substring(1))*data['cartnum'])
+                sum()
+            })
+		})
+	$(".del").click(function(){
+		var data = {"cartid":$(this).attr("cartid")}
+		var this_ =$(this)
+		confirm("即将删除此商品")
+		$.get("/delall/",data,function(data){
+			alert(data['msg'])
+			this_.parent().remove()
+            sum()
+		})
+	})
+    console.log($("#All input").prop("checked"))
+    if($("#All input").prop("checked")){
+        console.log("true")
+    }
+    // $("#All input").change(function(){
+    //     if($("#All input").prop("checked")){//当前如果是选中状态
+    //         console.log("true")
+    //         // $(this).prop("checked",true)
+    //     }
+    //     else{//当前如果是不选中状态
+    //         console.log("false")
+    //         // $(this).prop("checked",false)
+    //     }
+    // })
+	$("#All input").click(function(){
+		if($("#All input").prop("checked")){
+			$(".mycart .isselect").each(function(){
+				//true
+				$(this).prop("checked",true)
+				console.log("true")
+			})
+		}
+		else{
+			$(".mycart .isselect").each(function(){
+				//false
+				$(this).prop("checked",false)
+				console.log("false")
+			})
+		}
+	})
+
+	$(".mycart .isselect").click(function(){
+			flag = true
+			$(".mycart .isselect").each(function(){
+				if(!$(this).prop("checked")){
+					flag=false
+				}
+			})
+		$("#All input").prop("checked",flag)
+	})
+	$(".pay .btn").click(function(){
+		var cartids=[]
+		$(".mycart input").each(function(){
+			if($(this).prop("checked")){
+				cartids.push($(this).attr("cartid"))
+			}
+
+		})
+			console.log(cartids)
+			$.ajax({
+				  url: "/addorder/",
+				  type: "GET",
+				  data: {
+					"cartids":cartids
+				  },
+				  traditional: true,//这里设置为true
+				  success: function(data) {
+					console.log(data)
+					  window.open("/showorder/",target="_self")
+				  }
+			});
+	})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	var phone = $(".phone").eq(0);
 	var phoneCode = $(".code").eq(0);
-	
 	phone.mouseenter(function(){
 		phoneCode.show();
 		phoneCode.click(function(){
